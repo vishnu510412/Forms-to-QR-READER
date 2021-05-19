@@ -1,1 +1,3 @@
+#COVID QR CODE READER APP
 
+Tinkerhub BFH Project
