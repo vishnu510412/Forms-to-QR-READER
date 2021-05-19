@@ -12,11 +12,11 @@ class Register extends StatelessWidget
       [
         Container
         (
-          width:300,
-          height: 80,
+          width:250,
+          height: 90,
           decoration: BoxDecoration
           (
-            color: Colors.white,
+            color: Colors.green,
             borderRadius: BorderRadius.circular(40), 
              boxShadow: 
               [
