@@ -24,9 +24,9 @@ class MyApp extends StatelessWidget
         body: Center
         (
           child: Register()
-          //child: Merchant(),
-          //child: Costumer()
-          //child: Login()
+          child: Merchant(),
+          child: Costumer()
+          child: Login()
         ),
       ),
     );

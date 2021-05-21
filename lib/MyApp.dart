@@ -9,7 +9,7 @@ class App extends StatelessWidget
   {
     return MaterialApp
     (
-      title: "App Developed Using Flutter",
+      title: "QR CODE READER",
       home: Scaffold
       (
         body: Center
