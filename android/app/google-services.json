@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "262907439948",
+    "project_id": "qr-reader-ddc7b",
+    "storage_bucket": "qr-reader-ddc7b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262907439948:android:c614c80c95f883b1517de9",
+        "android_client_info": {
+          "package_name": "com.example.safe_move_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262907439948-ve4s17v4bqs71p42ko9srgpea4kcsmj6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCGatycjCa1SumtCSFbnZrp9SOF2HlFhM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "262907439948-ve4s17v4bqs71p42ko9srgpea4kcsmj6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

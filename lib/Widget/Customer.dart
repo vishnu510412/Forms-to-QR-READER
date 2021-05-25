@@ -1,7 +1,6 @@
 import "package:flutter/material.dart";
-import 'MerchantProfile.dart';
 
-class Merchant extends StatelessWidget
+class Customer extends StatelessWidget
 {
   @override
   Widget build(BuildContext context)
@@ -63,15 +62,15 @@ class Merchant extends StatelessWidget
       floatingActionButton: FloatingActionButton
       (
         backgroundColor: Colors.redAccent,
-        onPressed:()
+        onPressed :()
         {
-          showDialog
+           showDialog
            (
                   context: context,
                   builder: (ctx) => AlertDialog
                   (
                   title: Text("Alert"),
-                  content: Text("Notify costumers about the positive covid case reported,who had shopped from this Merchant"),
+                  content: Text("Notify all merchants you visited recently, that you Have Tested Covid Positive"),
                  ),
            );    
            
@@ -88,7 +87,7 @@ class Merchant extends StatelessWidget
           height: MediaQuery.of(context).size.height*0.4,
           child: Center
           (
-            child: Text("QR Code Scanner Of Merchant"),
+            child: Text("Scan QR Code of Merchant"),
           ),
           decoration: BoxDecoration
           (
@@ -115,7 +114,7 @@ class Merchant extends StatelessWidget
         backgroundColor: Colors.redAccent,
         title: Text
         (
-          "SafeShopping For Merchants",  
+          "SafeShopping For Costumer",  
         ),
         centerTitle: true,
         actions: 
@@ -123,17 +122,7 @@ class Merchant extends StatelessWidget
           IconButton
           (
             icon: Icon(Icons.account_box_rounded), 
-            onPressed: ()
-            {
-              Navigator.push
-             (
-              context,
-              MaterialPageRoute
-              (
-                builder: (context) => MProfile()
-              ),
-            ); 
-            },
+            onPressed: (){},
           ),
         ],
         
@@ -144,38 +133,28 @@ class Merchant extends StatelessWidget
         (
           children: 
           [
-            Container
+            DrawerHeader
             (
-            height: 70,
-            child:DrawerHeader
-            (
+              
               child: Center
               (
                 child:Text(
-                "Safe Shopping Menu",
-                style: TextStyle
-                (
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 20,
-                ),
+                "Safe Shopping Menu"
               ),
               ),
               
               decoration: BoxDecoration
               (     
                 color: Colors.redAccent,
+                borderRadius: BorderRadius.circular(20), 
           
               ),
             ),
-
-            ),
-            
             ListTile
             (
-              title: Text("Todays FootPrints"),
+              title: Text("Todays Visits"),
               selectedTileColor: Colors.greenAccent,
-              subtitle: Text("Click here for todays costumer list"),
+              subtitle: Text("Click here for Display Todays my Visits"),
               onTap: (){},
               onLongPress: (){},
               leading: Icon(Icons.square_foot_outlined),
@@ -183,9 +162,9 @@ class Merchant extends StatelessWidget
             ),
             ListTile
             (
-              title: Text("Overall Summary"),
+              title: Text("My visits"),
               selectedTileColor: Colors.greenAccent,
-              subtitle: Text("Click here for todays costumer list"),
+              subtitle: Text("Click here for all my visits"),
               onTap: (){},
               onLongPress: (){},
               leading: Icon(Icons.list_alt_outlined),
@@ -193,12 +172,12 @@ class Merchant extends StatelessWidget
             ),
             ListTile
             (
-              title: Text("Emergency"),
-              selectedTileColor: Colors.red,
-              subtitle: Text("Click here to Notify All Coustomers"),
+              title: Text("Shops"),
+              selectedTileColor: Colors.greenAccent,
+              subtitle: Text("Click here for Display All Nearby Shops"),
               onTap: (){},
               onLongPress: (){},
-              leading: Icon(Icons.access_alarms),
+              leading: Icon(Icons.square_foot_outlined),
               trailing: Icon(Icons.arrow_forward),
             ),
             ListTile

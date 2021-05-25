@@ -1,12 +1,16 @@
 
 import "package:flutter/material.dart";
+import 'Merchant.dart';
+import 'package:chat_app/Authenticate/Methods.dart';
 
 class Login extends StatelessWidget
 {
   @override
   Widget build(BuildContext context)
   {
-    return Stack
+    return Scaffold
+    (
+      body: Stack
     (
       children: 
       [
@@ -109,7 +113,7 @@ class Login extends StatelessWidget
                      (
                         borderSide: BorderSide
                        (
-                         color: Colors.blue,
+                         color: Colors.red,
                          width: 4,
                          
                        ),
@@ -121,24 +125,36 @@ class Login extends StatelessWidget
           ),
           ),
 
-      FlatButton
+      ElevatedButton
      
       (
         onPressed: ()
         {
-          
+           Navigator.push
+             (
+              context,
+              MaterialPageRoute
+              (
+                builder: (context) => Merchant()
+              ),
+            ); 
         },
         onLongPress: (){print("onlong pressed");},
         child: Text
         (
-          "Login ->"
+          "Login ->",
+           style: TextStyle(color: Colors.white,fontSize:30)
         ),
-        color: Colors.greenAccent,
-        textColor: Colors.white,
-        splashColor: Colors.red,
-        shape: StadiumBorder(),
-        padding: EdgeInsets.all(25),
-      ),
+        style: ElevatedButton.styleFrom
+        (
+          primary: Colors.greenAccent,
+
+         shape: RoundedRectangleBorder
+         (
+           borderRadius: BorderRadius.circular(20)
+         ),
+        ),
+        ),
 
           ],
         ),
@@ -148,6 +164,9 @@ class Login extends StatelessWidget
           
       //***************************Children Ends Here***************************************
       ], 
+    ),
+
     );
+    
   } 
 }  

@@ -1,34 +1,20 @@
+import 'package:chat_app/Widget/frontpage.dart';
+
+import './Authenticate/Autheticate.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-//import "./Widget/Login.dart";
-import "./Widget/RsgisterMerchant.dart";
-//import "./Widget/RegisterCostumer.dart";
-//import "./Widget/Merchant.dart";
-//import "./Widget/Costumer.dart";
-void main()
-{
-  runApp(MyApp());
+Future main() async {
+
+  runApp(App());
 }
 
-
-//****************************************************************************App*************************************************************
-class MyApp extends StatelessWidget
-{
+class App extends StatelessWidget {
   @override
-  Widget build(BuildContext context)
-  {
-    return MaterialApp
-    (
-      title: "App Developed Using Flutter",
-      home: Scaffold(
-        body: Center
-        (
-          child: Register()
-          child: Merchant(),
-          child: Costumer()
-          child: Login()
-        ),
-      ),
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: FrontPage(),
     );
   }
 }
